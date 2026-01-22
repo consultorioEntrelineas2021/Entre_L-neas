@@ -157,6 +157,142 @@
       </div>
     </div>
   </section>
+  <!-- ====== REGRESO A CLASES ====== -->
+<style>
+  .regreso-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:22px;
+    margin-top:25px;
+  }
+
+  .regreso-card{
+    background:linear-gradient(160deg,#ecfeff,#f0f9ff);
+    border:2px dashed #67e8f9;
+    border-radius:20px;
+    padding:22px;
+    transition:.3s;
+    position:relative;
+    overflow:hidden;
+  }
+
+  .regreso-card:hover{
+    transform:translateY(-6px) scale(1.02);
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+  }
+
+  .regreso-card h3{
+    margin-top:0;
+    color:#0369a1;
+  }
+
+  .regreso-card button{
+    margin-top:15px;
+    padding:10px 18px;
+    border-radius:999px;
+    border:none;
+    background:linear-gradient(135deg,#22d3ee,#a78bfa);
+    color:white;
+    font-weight:700;
+    cursor:pointer;
+    transition:.2s;
+  }
+
+  .regreso-card button:hover{
+    filter:brightness(1.1);
+    transform:scale(1.05);
+  }
+
+  .regreso-info{
+    display:none;
+    margin-top:14px;
+    color:#334155;
+    line-height:1.6;
+    animation:fade .3s ease-in-out;
+  }
+
+  @keyframes fade{
+    from{opacity:0; transform:translateY(6px)}
+    to{opacity:1; transform:translateY(0)}
+  }
+</style>
+
+<section id="regreso-clases" class="section">
+  <h2>🎒 Regreso a Clases</h2>
+  <p>
+    El regreso a clases es una etapa de transición importante. Un acompañamiento
+    psicopedagógico adecuado favorece la adaptación emocional, la motivación
+    escolar y el aprendizaje significativo.
+  </p>
+
+  <div class="regreso-grid">
+
+    <div class="regreso-card">
+      <h3>🧠 Adaptación Escolar</h3>
+      <p>Volver a la rutina de forma gradual y segura.</p>
+      <button onclick="toggleInfo(this)">Ver consejos</button>
+      <div class="regreso-info">
+        ✔ Retomar horarios de sueño progresivamente<br>
+        ✔ Hablar sobre la escuela con actitud positiva<br>
+        ✔ Anticipar cambios y rutinas<br>
+        ✔ Validar emociones como nervios o temor
+      </div>
+    </div>
+
+    <div class="regreso-card">
+      <h3>📚 Hábitos de Estudio</h3>
+      <p>La organización fortalece la autonomía.</p>
+      <button onclick="toggleInfo(this)">Ver consejos</button>
+      <div class="regreso-info">
+        ✔ Espacio fijo y ordenado para estudiar<br>
+        ✔ Rutinas cortas y constantes<br>
+        ✔ Uso de agendas o recordatorios visuales<br>
+        ✔ Refuerzos positivos por el esfuerzo
+      </div>
+    </div>
+
+    <div class="regreso-card">
+      <h3>💛 Acompañamiento Emocional</h3>
+      <p>Las emociones influyen directamente en el aprendizaje.</p>
+      <button onclick="toggleInfo(this)">Ver consejos</button>
+      <div class="regreso-info">
+        ✔ Escucha activa sin juzgar<br>
+        ✔ Reconocer logros pequeños<br>
+        ✔ Evitar comparaciones<br>
+        ✔ Fomentar la confianza y autoestima
+      </div>
+    </div>
+
+    <div class="regreso-card">
+      <h3>✏️ Tutorías Psicopedagógicas</h3>
+      <p>Apoyo personalizado según cada necesidad.</p>
+      <button onclick="toggleInfo(this)">Ver beneficios</button>
+      <div class="regreso-info">
+        ✔ Técnicas de estudio adaptadas<br>
+        ✔ Refuerzo en lectura, escritura y matemáticas<br>
+        ✔ Atención individualizada<br>
+        ✔ Seguimiento continuo
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:35px">
+    <a class="btn" href="#contacto">Agendar acompañamiento</a>
+  </div>
+</section>
+
+<script>
+  function toggleInfo(btn){
+    const info = btn.nextElementSibling;
+    document.querySelectorAll(".regreso-info").forEach(i=>{
+      if(i !== info) i.style.display = "none";
+    });
+    info.style.display = info.style.display === "block" ? "none" : "block";
+  }
+</script>
+<!-- ====== FIN REGRESO A CLASES ====== -->
+
 
   <section id="contacto" class="section">
     <h2>Contacto / Agendar cita</h2>
@@ -204,6 +340,7 @@
 
 </body>
 </html>
+
 
 
 
