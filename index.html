@@ -338,9 +338,55 @@
     p.style.display = p.style.display === 'block' ? 'none' : 'block';
   }
 </script>
+<style>
+/* ===== VIDA VISUAL GLOBAL ===== */
+body{
+  background: linear-gradient(-45deg,#f0f9ff,#e0f2fe,#ecfeff,#f5f3ff);
+  background-size: 400% 400%;
+  animation: gradientFlow 20s ease infinite;
+}
+
+@keyframes gradientFlow{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+
+/* ===== ANIMACIÓN AUTOMÁTICA A SECCIONES ===== */
+section, .card, .service, .regreso-card{
+  opacity:0;
+  transform: translateY(30px);
+  transition: all .9s ease;
+}
+
+section.visible, .card.visible, .service.visible, .regreso-card.visible{
+  opacity:1;
+  transform: translateY(0);
+}
+</style>
+
+<script>
+const elements = document.querySelectorAll(
+  'section, .card, .service, .regreso-card'
+);
+
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  },
+  { threshold: 0.15 }
+);
+
+elements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
+
 
 
 
