@@ -416,6 +416,123 @@
   </div>
 </section>
 <!-- ===== FIN IMPORTANCIA ===== -->
+  <section class="noticias">
+  <h2>📰 Actualidad Educativa y Tecnología</h2>
+  <p class="intro">
+    Información clara y actual para familias y docentes sobre educación, aprendizaje y tecnología en la infancia.
+  </p>
+
+  <div class="tarjeta">
+    <h3>🤖 IA en el aprendizaje infantil</h3>
+    <p>La inteligencia artificial ya forma parte del entorno de aprendizaje de los niños.</p>
+    <button onclick="toggleInfo('info1')">Leer más</button>
+    <div id="info1" class="extra">
+      <p>
+        La IA puede apoyar el aprendizaje respetando el ritmo individual de cada niño.
+        Permite reforzar contenidos y presentar la información de distintas maneras.
+        Es fundamental el acompañamiento adulto para fomentar la reflexión,
+        el pensamiento propio y el uso responsable de la tecnología.
+      </p>
+    </div>
+  </div>
+
+  <div class="tarjeta">
+    <h3>🎓 Aprender en la era digital</h3>
+    <p>La educación actual busca comprensión y participación activa.</p>
+    <button onclick="toggleInfo('info2')">Leer más</button>
+    <div id="info2" class="extra">
+      <p>
+        Aprender hoy implica analizar, investigar y construir conocimiento.
+        La era digital fortalece habilidades como el pensamiento crítico,
+        la creatividad y la autonomía cuando existe orientación adulta.
+      </p>
+    </div>
+  </div>
+
+  <div class="tarjeta">
+    <h3>👨‍👩‍👧 Tecnología y familia</h3>
+    <p>El uso de la tecnología en casa influye en el desarrollo infantil.</p>
+    <button onclick="toggleInfo('info3')">Leer más</button>
+    <div id="info3" class="extra">
+      <p>
+        Establecer rutinas, normas y espacios de diálogo permite un uso saludable
+        de la tecnología. Conversar sobre lo que los niños ven y hacen fortalece
+        los vínculos familiares y el bienestar emocional.
+      </p>
+    </div>
+  </div>
+
+  <div class="tarjeta">
+    <h3>🌱 Habilidades del futuro desde la infancia</h3>
+    <p>El aprendizaje infantil no solo prepara para la escuela, también para la vida.</p>
+    <button onclick="toggleInfo('info4')">Leer más</button>
+    <div id="info4" class="extra">
+      <p>
+        Desde edades tempranas, los niños pueden desarrollar habilidades como
+        la creatividad, la adaptación al cambio, la resolución de problemas
+        y la confianza en sí mismos. La tecnología, bien orientada,
+        puede estimular la curiosidad y el pensamiento flexible.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+.noticias {
+  padding: 40px;
+  background: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.noticias h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.tarjeta {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.tarjeta h3 {
+  margin-top: 0;
+}
+
+.tarjeta button {
+  margin-top: 10px;
+  background: #6a5acd;
+  color: #ffffff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.tarjeta button:hover {
+  background: #5a4fcf;
+}
+
+.extra {
+  display: none;
+  margin-top: 15px;
+}
+</style>
+
+<script>
+function toggleInfo(id) {
+  const el = document.getElementById(id);
+  el.style.display = el.style.display === "block" ? "none" : "block";
+}
+</script>
+
 
   <section id="contacto" class="section">
     <h2>Contacto / Agendar cita</h2>
@@ -463,6 +580,7 @@
 
 </body>
 </html>
+
 
 
 
