@@ -416,144 +416,173 @@
   </div>
 </section>
 <!-- ===== FIN IMPORTANCIA ===== -->
-<!-- ===== SECCIÓN ACTUALIDAD EDUCATIVA ===== -->
-<section class="actualidad-educativa">
-  <h2>🗞️ Entre Líneas – Actualidad Educativa</h2>
-  <p class="subtitulo">Información clara y actual para familias y educadores</p>
-
-  <div class="cards">
-
-    <!-- CARD 1 -->
-    <div class="card">
-      <img src="tareas.jpg" alt="Tareas escolares">
-      <h3>¿Más tareas significa más aprendizaje?</h3>
-      <p class="intro">
-        Estudios recientes cuestionan la cantidad de tareas en casa.
-      </p>
-
-      <button onclick="toggleInfo(1)">Leer más</button>
-
-      <div class="extra" id="info1">
-        <p>
-          Investigaciones actuales indican que el exceso de tareas puede generar
-          estrés y desmotivación. La calidad y el acompañamiento familiar son más
-          importantes que la cantidad.
-        </p>
-      </div>
-    </div>
-
-    <!-- CARD 2 -->
-    <div class="card">
-      <img src="pantallas.jpg" alt="Pantallas en la infancia">
-      <h3>Pantallas, videojuegos e IA</h3>
-      <p class="intro">
-        ¿Aliados o enemigos del aprendizaje infantil?
-      </p>
-
-      <button onclick="toggleInfo(2)">Leer más</button>
-
-      <div class="extra" id="info2">
-        <p>
-          El uso adecuado de pantallas puede potenciar habilidades cognitivas.
-          El secreto está en el tiempo, el contenido y la mediación adulta.
-        </p>
-      </div>
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="card">
-      <img src="aprendizaje.jpg" alt="Aprendizaje infantil">
-      <h3>Nuevas formas de aprender</h3>
-      <p class="intro">
-        El aprendizaje ya no es solo memorizar.
-      </p>
-
-      <button onclick="toggleInfo(3)">Leer más</button>
-
-      <div class="extra" id="info3">
-        <p>
-          Metodologías activas como el juego, proyectos y aprendizaje emocional
-          están demostrando mejores resultados a largo plazo.
-        </p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== ESTILOS ===== -->
+<!-- ====== ENTRE LÍNEAS – ACTUALIDAD EDUCATIVA ====== -->
 <style>
-.actualidad-educativa {
+.actualidad {
   padding: 50px 20px;
-  background: #f7f9fc;
+  background: #f4f6f8;
+  font-family: Arial, sans-serif;
+}
+
+.actualidad h2 {
   text-align: center;
+  margin-bottom: 40px;
+  color: #333;
 }
 
-.actualidad-educativa h2 {
-  font-size: 2rem;
-  margin-bottom: 10px;
-}
-
-.subtitulo {
-  margin-bottom: 30px;
-  color: #555;
-}
-
-.cards {
+.revistas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
-  max-width: 1100px;
-  margin: auto;
 }
 
 .card {
   background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-  padding: 20px;
-  text-align: left;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
 }
 
-.card img {
-  width: 100%;
+.card-img {
   height: 180px;
-  object-fit: cover;
-  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+}
+
+.img-1 {
+  background-image: url("data:image/svg+xml;utf8,
+  <svg xmlns='http://www.w3.org/2000/svg' width='600' height='300'>
+  <rect width='100%' height='100%' fill='%23c5cae9'/>
+  <text x='50%' y='50%' font-size='28' fill='%23333'
+  dominant-baseline='middle' text-anchor='middle'>
+  Tareas y Aprendizaje
+  </text>
+  </svg>");
+}
+
+.img-2 {
+  background-image: url("data:image/svg+xml;utf8,
+  <svg xmlns='http://www.w3.org/2000/svg' width='600' height='300'>
+  <rect width='100%' height='100%' fill='%23b2dfdb'/>
+  <text x='50%' y='50%' font-size='28' fill='%23333'
+  dominant-baseline='middle' text-anchor='middle'>
+  Pantallas e IA
+  </text>
+  </svg>");
+}
+
+.img-3 {
+  background-image: url("data:image/svg+xml;utf8,
+  <svg xmlns='http://www.w3.org/2000/svg' width='600' height='300'>
+  <rect width='100%' height='100%' fill='%23ffe0b2'/>
+  <text x='50%' y='50%' font-size='28' fill='%23333'
+  dominant-baseline='middle' text-anchor='middle'>
+  Aprendizaje Infantil
+  </text>
+  </svg>");
+}
+
+.card-content {
+  padding: 20px;
 }
 
 .card h3 {
-  margin-top: 15px;
+  margin-top: 0;
+  color: #444;
 }
 
-.card button {
+.card p {
+  color: #666;
+  font-size: 14px;
+}
+
+.extra {
+  display: none;
   margin-top: 10px;
-  background: #4a6cf7;
-  color: white;
+}
+
+.btn {
+  margin-top: 15px;
+  background: #6a1b9a;
+  color: #fff;
   border: none;
   padding: 8px 14px;
   border-radius: 6px;
   cursor: pointer;
 }
 
-.card button:hover {
-  background: #3a55d6;
-}
-
-.extra {
-  display: none;
-  margin-top: 12px;
-  color: #444;
+.btn:hover {
+  background: #4a148c;
 }
 </style>
 
-<!-- ===== JAVASCRIPT ===== -->
+<section class="actualidad">
+  <h2>🗞️ Entre Líneas – Actualidad Educativa</h2>
+
+  <div class="revistas">
+
+    <div class="card">
+      <div class="card-img img-1"></div>
+      <div class="card-content">
+        <h3>¿Más tareas significa más aprendizaje?</h3>
+        <p>Una pregunta frecuente en familias y escuelas.</p>
+        <div class="extra">
+          <p>
+            La evidencia indica que el exceso de tareas puede generar estrés.
+            Lo importante es que sean significativas, breves y acordes a la edad.
+          </p>
+        </div>
+        <button class="btn" onclick="toggleInfo(this)">Leer más</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img img-2"></div>
+      <div class="card-content">
+        <h3>Pantallas, videojuegos e IA</h3>
+        <p>El verdadero impacto en el desarrollo infantil.</p>
+        <div class="extra">
+          <p>
+            La tecnología no es negativa por sí sola. El acompañamiento adulto,
+            el tiempo y el tipo de contenido marcan la diferencia.
+          </p>
+        </div>
+        <button class="btn" onclick="toggleInfo(this)">Leer más</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-img img-3"></div>
+      <div class="card-content">
+        <h3>Avances en aprendizaje infantil</h3>
+        <p>Cómo aprenden mejor los niños hoy.</p>
+        <div class="extra">
+          <p>
+            El juego, la emoción y el vínculo afectivo son pilares clave del
+            aprendizaje según la neuroeducación.
+          </p>
+        </div>
+        <button class="btn" onclick="toggleInfo(this)">Leer más</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <script>
-function toggleInfo(id) {
-  const box = document.getElementById("info" + id);
-  box.style.display = box.style.display === "block" ? "none" : "block";
+function toggleInfo(btn) {
+  const extra = btn.previousElementSibling;
+  if (extra.style.display === "block") {
+    extra.style.display = "none";
+    btn.textContent = "Leer más";
+  } else {
+    extra.style.display = "block";
+    btn.textContent = "Leer menos";
+  }
 }
 </script>
+<!-- ====== FIN ACTUALIDAD EDUCATIVA ====== -->
+
 
 
 
@@ -603,6 +632,7 @@ function toggleInfo(id) {
 
 </body>
 </html>
+
 
 
 
