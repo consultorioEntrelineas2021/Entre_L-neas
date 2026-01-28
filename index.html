@@ -416,7 +416,7 @@
   </div>
 </section>
 <!-- ===== FIN IMPORTANCIA ===== -->
-  <!-- ====== ENTRE LÍNEAS – ACTUALIDAD EDUCATIVA ====== -->
+<!-- ====== ENTRE LÍNEAS – ACTUALIDAD EDUCATIVA ====== -->
 <style>
 .actualidad {
   padding: 60px 20px;
@@ -436,7 +436,6 @@
   max-width: 750px;
   margin: 0 auto 40px;
   color: #555;
-  font-size: 1rem;
 }
 
 .cards {
@@ -448,60 +447,58 @@
 }
 
 .card {
-  background: #ffffff;
-  border-radius: 14px;
+  background: #fff;
+  border-radius: 16px;
   box-shadow: 0 8px 18px rgba(0,0,0,0.08);
   overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-6px);
 }
 
 .card img {
   width: 100%;
-  height: 180px;
+  height: 220px;
   object-fit: cover;
 }
 
-.card .contenido {
+.contenido {
   padding: 20px;
 }
 
 .categoria {
-  font-size: 0.75rem;
-  color: #fff;
   background: #6c63ff;
+  color: #fff;
   padding: 5px 12px;
   border-radius: 20px;
+  font-size: 0.75rem;
   display: inline-block;
   margin-bottom: 10px;
 }
 
 .card h3 {
-  font-size: 1.2rem;
   color: #2c3e50;
   margin-bottom: 10px;
 }
 
 .card p {
-  font-size: 0.95rem;
   color: #555;
-  margin-bottom: 15px;
+  font-size: 0.95rem;
 }
 
-.card a {
-  text-decoration: none;
+.extra {
+  display: none;
+  margin-top: 10px;
+}
+
+.leer-mas {
+  display: inline-block;
+  margin-top: 12px;
   color: #6c63ff;
   font-weight: bold;
-  font-size: 0.9rem;
+  cursor: pointer;
 }
 </style>
 
 <section class="actualidad">
   <h2>🗞️ Entre Líneas – Actualidad Educativa</h2>
-
   <p class="descripcion">
     Noticias, avances y temas actuales sobre educación, crianza y aprendizaje infantil,
     explicados de forma clara y cercana para las familias.
@@ -509,60 +506,101 @@
 
   <div class="cards">
 
+    <!-- CARD 1 -->
     <div class="card">
       <img src="https://images.unsplash.com/photo-1588072432836-e10032774350" alt="Tareas escolares">
       <div class="contenido">
         <span class="categoria">Noticias</span>
         <h3>¿Más tareas significan más aprendizaje?</h3>
-        <p>
-          Analizamos qué dicen los estudios recientes sobre la cantidad de tareas
-          y su impacto real en el aprendizaje infantil.
-        </p>
-        <a href="#">Leer más</a>
+        <p>Analizamos qué dicen los estudios recientes sobre la cantidad de tareas.</p>
+
+        <div class="extra">
+          <p>
+            Las investigaciones actuales muestran que más tareas no siempre implican
+            mejores resultados. La calidad, el sentido y el acompañamiento emocional
+            son factores clave para un aprendizaje significativo.
+          </p>
+        </div>
+
+        <span class="leer-mas" onclick="toggleInfo(this)">Leer más</span>
       </div>
     </div>
 
+    <!-- CARD 2 -->
     <div class="card">
       <img src="https://images.unsplash.com/photo-1604881991405-b273c7c1c7a9" alt="Pantallas y niños">
       <div class="contenido">
         <span class="categoria">Tecnología</span>
-        <h3>Pantallas en la infancia: ¿enemigas o aliadas?</h3>
-        <p>
-          Las pantallas no son el problema. Te contamos cómo acompañar su uso
-          sin culpas ni prohibiciones extremas.
-        </p>
-        <a href="#">Leer más</a>
+        <h3>Pantallas en la infancia</h3>
+        <p>El uso de pantallas genera muchas dudas en las familias.</p>
+
+        <div class="extra">
+          <p>
+            Las pantallas no son el problema en sí. El tiempo de uso, el contenido
+            y la presencia de un adulto que acompañe marcan la diferencia en el
+            desarrollo infantil.
+          </p>
+        </div>
+
+        <span class="leer-mas" onclick="toggleInfo(this)">Leer más</span>
       </div>
     </div>
 
+    <!-- CARD 3 -->
     <div class="card">
       <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf" alt="Emoción y aprendizaje">
       <div class="contenido">
         <span class="categoria">Aprendizaje</span>
         <h3>La emoción también enseña</h3>
-        <p>
-          Un niño que se siente seguro aprende mejor. La emoción es clave
-          en el proceso de aprendizaje.
-        </p>
-        <a href="#">Leer más</a>
+        <p>El aprendizaje no es solo cognitivo, también es emocional.</p>
+
+        <div class="extra">
+          <p>
+            Un niño que se siente seguro, comprendido y acompañado tiene mayor
+            disposición para aprender. Las emociones influyen directamente en
+            la atención y la memoria.
+          </p>
+        </div>
+
+        <span class="leer-mas" onclick="toggleInfo(this)">Leer más</span>
       </div>
     </div>
 
+    <!-- CARD 4 -->
     <div class="card">
       <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74" alt="Juego infantil">
       <div class="contenido">
         <span class="categoria">Avances</span>
         <h3>El juego vuelve a ser protagonista</h3>
-        <p>
-          Cada vez más estudios confirman que el juego es una herramienta
-          fundamental para aprender.
-        </p>
-        <a href="#">Leer más</a>
+        <p>El juego es una herramienta poderosa de aprendizaje.</p>
+
+        <div class="extra">
+          <p>
+            Jugar favorece el desarrollo cognitivo, emocional y social.
+            Aprender jugando permite a los niños explorar, crear y disfrutar
+            del proceso educativo.
+          </p>
+        </div>
+
+        <span class="leer-mas" onclick="toggleInfo(this)">Leer más</span>
       </div>
     </div>
 
   </div>
 </section>
+
+<script>
+function toggleInfo(elemento) {
+  const extra = elemento.previousElementSibling;
+  if (extra.style.display === "block") {
+    extra.style.display = "none";
+    elemento.textContent = "Leer más";
+  } else {
+    extra.style.display = "block";
+    elemento.textContent = "Leer menos";
+  }
+}
+</script>
 <!-- ====== FIN ACTUALIDAD EDUCATIVA ====== -->
 
 
@@ -613,6 +651,7 @@
 
 </body>
 </html>
+
 
 
 
