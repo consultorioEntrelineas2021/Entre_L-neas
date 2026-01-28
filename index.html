@@ -434,17 +434,17 @@
   .noticias .intro{
     text-align:center;
     margin-bottom:35px;
-    max-width:800px;
+    max-width:900px;
     margin-left:auto;
     margin-right:auto;
-    line-height:1.6;
+    line-height:1.7;
   }
 
   .noticia-card{
     background:#ffffff;
-    padding:25px;
-    margin-bottom:25px;
-    border-radius:16px;
+    padding:28px;
+    margin-bottom:30px;
+    border-radius:18px;
     box-shadow:0 6px 18px rgba(0,0,0,.06);
     transition:.3s;
   }
@@ -453,31 +453,21 @@
     transform:translateY(-4px);
   }
 
-  .noticia-card h3{
-    margin-top:0;
-  }
-
   .noticia-card button{
-    margin-top:15px;
-    padding:10px 20px;
+    margin-top:18px;
+    padding:10px 22px;
     border-radius:999px;
     border:none;
     background:linear-gradient(135deg,#22c1c3,#7c7cff);
     color:white;
     font-weight:700;
     cursor:pointer;
-    transition:.2s;
-  }
-
-  .noticia-card button:hover{
-    transform:scale(1.05);
-    filter:brightness(1.1);
   }
 
   .noticia-extra{
     display:none;
-    margin-top:18px;
-    line-height:1.7;
+    margin-top:20px;
+    line-height:1.8;
     color:#334155;
     animation:fadeNoticia .3s ease-in-out;
   }
@@ -491,63 +481,88 @@
 <section class="noticias">
   <h2>📰 Actualidad Educativa y Tecnología</h2>
   <p class="intro">
-    Un espacio informativo para familias y docentes donde se comparten reflexiones,
-    ideas actuales y orientaciones sobre educación, aprendizaje y tecnología en la infancia.
+    Este espacio está pensado para compartir información actual, reflexiones y orientaciones
+    dirigidas a familias y docentes, con el objetivo de comprender mejor cómo la educación,
+    la tecnología y la inteligencia artificial influyen en el aprendizaje y desarrollo infantil.
   </p>
 
+  <!-- IA -->
   <div class="noticia-card">
     <h3>🤖 IA en el aprendizaje infantil</h3>
-    <p>La inteligencia artificial ya está presente en el entorno educativo de los niños.</p>
+    <p>La inteligencia artificial ya forma parte del entorno educativo de los niños.</p>
     <button onclick="toggleNoticia(this)">Leer más</button>
     <div class="noticia-extra">
       <p>
-        La inteligencia artificial puede convertirse en un apoyo valioso en el aprendizaje infantil
-        cuando se utiliza de forma consciente y acompañada. Permite adaptarse al ritmo de cada niño,
-        reforzar contenidos y presentar la información desde distintos enfoques. Es importante que
-        el adulto supervise y guíe este proceso, fomentando la reflexión, la curiosidad y el
-        pensamiento propio, evitando que la tecnología sustituya el esfuerzo personal.
+        La inteligencia artificial puede convertirse en una aliada importante en el aprendizaje
+        infantil cuando se utiliza de manera consciente y acompañada por adultos. Su principal
+        aporte es la posibilidad de adaptarse al ritmo de cada niño, ofreciendo refuerzos
+        personalizados y diferentes formas de explicar un mismo contenido. Esto favorece la
+        comprensión y reduce la frustración que muchas veces aparece cuando el aprendizaje no
+        avanza al ritmo esperado. Sin embargo, es fundamental que la tecnología no reemplace la
+        reflexión, la curiosidad ni el esfuerzo personal. El rol de la familia y de los docentes
+        es guiar, supervisar y enseñar a los niños a cuestionar, analizar y construir sus propias
+        ideas. La IA debe ser entendida como un apoyo educativo que motive el aprendizaje, fomente
+        la autonomía y fortalezca la confianza, siempre dentro de un marco de acompañamiento
+        emocional y valores claros.
       </p>
     </div>
   </div>
 
+  <!-- ERA DIGITAL -->
   <div class="noticia-card">
     <h3>🎓 Aprender en la era digital</h3>
     <p>La educación actual busca niños activos, reflexivos y participativos.</p>
     <button onclick="toggleNoticia(this)">Leer más</button>
     <div class="noticia-extra">
       <p>
-        Aprender en la era digital implica un cambio en la forma de enseñar y aprender.
-        Los niños interactúan con la información, la analizan y la transforman en conocimiento.
-        Este enfoque fortalece el pensamiento crítico, la creatividad y la autonomía cuando existe
-        acompañamiento adulto que oriente y dé sentido a lo aprendido.
+        Aprender en la era digital implica un cambio profundo en la forma de enseñar y aprender.
+        Hoy los niños no solo reciben información, sino que interactúan con ella, la comparan,
+        la analizan y la transforman en conocimiento. Este proceso favorece el desarrollo del
+        pensamiento crítico, la creatividad y la capacidad de resolver problemas. Cuando existe
+        una guía adecuada, los niños aprenden a investigar, expresar opiniones y tomar decisiones
+        con mayor seguridad. El acompañamiento adulto es clave para ayudarles a seleccionar
+        información confiable, reflexionar sobre lo aprendido y aplicar ese conocimiento en
+        situaciones cotidianas. La educación digital no sustituye el vínculo humano, sino que lo
+        complementa y lo fortalece cuando se usa con intención pedagógica.
       </p>
     </div>
   </div>
 
+  <!-- FAMILIA -->
   <div class="noticia-card">
     <h3>👨‍👩‍👧 Tecnología y familia</h3>
-    <p>La forma en que se usa la tecnología en casa influye directamente en el desarrollo infantil.</p>
+    <p>La forma en que se usa la tecnología en casa impacta el desarrollo infantil.</p>
     <button onclick="toggleNoticia(this)">Leer más</button>
     <div class="noticia-extra">
       <p>
-        La tecnología puede ser una oportunidad para compartir y aprender en familia si se utilizan
-        normas claras y rutinas adecuadas. Conversar sobre lo que los niños ven y hacen fortalece el
-        vínculo familiar, favorece la comunicación y previene dificultades emocionales o académicas
-        relacionadas con el uso excesivo o desorganizado.
+        La tecnología en el hogar puede ser una herramienta positiva cuando se integra de manera
+        equilibrada en la rutina familiar. Establecer horarios, normas claras y espacios de diálogo
+        brinda seguridad a los niños y les permite desarrollar hábitos saludables. Más allá del
+        tiempo de uso, es fundamental acompañar y conversar sobre lo que los niños ven, hacen y
+        sienten. Estas conversaciones fortalecen el vínculo familiar, favorecen la comunicación
+        emocional y ayudan a detectar a tiempo posibles dificultades. La presencia activa de la
+        familia previene el uso excesivo de la tecnología y promueve un desarrollo emocional,
+        social y académico más sano.
       </p>
     </div>
   </div>
 
+  <!-- HABILIDADES -->
   <div class="noticia-card">
     <h3>🌱 Habilidades del futuro desde la infancia</h3>
-    <p>El aprendizaje infantil no solo prepara para la escuela, también prepara para la vida.</p>
+    <p>El aprendizaje infantil también prepara a los niños para la vida.</p>
     <button onclick="toggleNoticia(this)">Leer más</button>
     <div class="noticia-extra">
       <p>
-        Desde la infancia es posible fomentar habilidades como la creatividad, la adaptación al
-        cambio, la resolución de problemas y la toma de decisiones. La tecnología, bien orientada,
-        puede estimular la curiosidad y el pensamiento flexible. El acompañamiento adulto es clave
-        para reforzar la confianza, la autonomía y los valores necesarios para el futuro.
+        Desde la infancia es posible fortalecer habilidades que serán esenciales a lo largo de la
+        vida, como la creatividad, la adaptación al cambio, la resolución de problemas y la toma
+        de decisiones. Estas habilidades se desarrollan cuando los niños tienen oportunidades para
+        explorar, equivocarse y aprender en un entorno seguro. La tecnología y la inteligencia
+        artificial, usadas con intención educativa, pueden estimular la curiosidad y el pensamiento
+        flexible. El acompañamiento adulto es fundamental para guiar estos procesos, reforzar la
+        confianza en sí mismos y enseñar valores como la responsabilidad, la autonomía y el respeto.
+        Preparar a los niños para el futuro implica brindarles herramientas, pero también apoyo
+        emocional y orientación constante.
       </p>
     </div>
   </div>
@@ -556,16 +571,13 @@
 <script>
 function toggleNoticia(btn){
   const info = btn.nextElementSibling;
-
   document.querySelectorAll(".noticia-extra").forEach(i=>{
     if(i !== info) i.style.display = "none";
   });
-
   info.style.display = info.style.display === "block" ? "none" : "block";
 }
 </script>
 <!-- ====== FIN SECCIÓN NOTICIAS ====== -->
-
 
 
 
@@ -615,6 +627,7 @@ function toggleNoticia(btn){
 
 </body>
 </html>
+
 
 
 
